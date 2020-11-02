@@ -15,8 +15,8 @@ class Parser
         $transactions = [];
         if ($handle) {
             while (($buffer = fgets($handle, 4096)) !== false) {
-                $data = json_decode($buffer);
-                $transactions[] = new TransactionDTO($data->bin, $data->amount, $data->currency);
+                $data = json_decode($buffer, true, 512, \JSON_THROW_ON_ERROR);
+                $transactions[] = new TransactionDTO($data['bin'], $data['amount'], $data['currency']);
             }
             if (!feof($handle)) {
                 throw new \Exception('Unexpected error');

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "32b8dfad807a02e68f4c4cfc39215db7",
+    "content-hash": "d312d1217fd225afebd88fe07d178416",
     "packages": [
         {
             "name": "elao/enum",
@@ -4286,7 +4286,8 @@
     "platform": {
         "php": ">=7.2.5",
         "ext-ctype": "*",
-        "ext-iconv": "*"
+        "ext-iconv": "*",
+        "ext-json": "^7.4"
     },
     "platform-dev": []
 }
